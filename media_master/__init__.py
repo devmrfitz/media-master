@@ -10,7 +10,9 @@ import tempfile
 from media_master.utils import compress_image, compress_video, invert_image, resize_image, trim_video, watermark_image_using_image, watermark_image_using_text 
 
 AZURE_CONNECTION_STRING = os.getenv('AzureWebJobsStorage')
-CONTAINER_NAME = "azure-webjobs-hosts"
+CONTAINER_NAME = "devmrfitz"
+
+CONTAINER_NAME = "devmrfitz"
 print = logging.info
 
 def main(myblob: func.blob.InputStream):

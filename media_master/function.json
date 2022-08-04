@@ -5,8 +5,8 @@
       "name": "myblob",
       "type": "blobTrigger",
       "direction": "in",
-      "path": "azure-webjobs-hosts/data/{name}",
-      "connection": ""
+      "path": "devmrfitz/data/{name}",
+      "connection": "devmrfitz_STORAGE"
     }
   ]
 }
