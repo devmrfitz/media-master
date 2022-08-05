@@ -18,7 +18,7 @@ For example, the following metadata on an image blob would trigger a compression
 ```json
 {
     "command": "[\"compress_image\", 80]",
-    "email": "email@example.com
+    "email": "email@example.com"
 }
 ```
 
