@@ -1,5 +1,9 @@
+# Author: devmrfitz
+
 import os
 
+class UnidentifiedVideoError(Exception):
+    pass
 
 FFMPEG_PATH = os.path.join(os.path.dirname(__file__), 'ffmpeg/ffmpeg')
 FONT_FILE_PATH = os.path.join(os.path.dirname(__file__), 'Roboto-Bold.ttf')
@@ -102,15 +106,20 @@ def trim_video(video_path, output_path, start_seconds, end_seconds):
     end_time = str(datetime.timedelta(seconds=end_seconds))
 
     # Trim the video
-    subprocess.call([FFMPEG_PATH, '-i', video_path, '-ss', start_time, '-to', end_time, '-c', 'copy', output_path, '-accurate_seek'])
-
-
+    ffmpeg_output = subprocess.run([FFMPEG_PATH, '-i', video_path, '-ss', start_time, '-to', end_time, 
+        '-c', 'copy', output_path, '-accurate_seek'], capture_output=True, text=True)
+    if ffmpeg_output.stderr and "Conversion failed!" in ffmpeg_output.stderr:
+        raise UnidentifiedVideoError(ffmpeg_output.stderr)
 
 def compress_video(video_path, output_path, crf=28):
     if crf < 0 or crf > 51:
         raise Exception('crf must be between 0 and 51')
+            
     import subprocess
 
     # Compress the video
-    subprocess.call([FFMPEG_PATH, '-i', video_path, '-c:v', 'libx265', '-crf', str(crf), '-c:a', 'copy', output_path])
+    ffmpeg_output = subprocess.run([FFMPEG_PATH, '-i', video_path, '-c:v', 
+        'libx265', '-crf', str(crf), '-c:a', 'copy', output_path], capture_output=True, text=True)
+    if ffmpeg_output.stderr and "Conversion failed!" in ffmpeg_output.stderr:
+        raise UnidentifiedVideoError(ffmpeg_output.stderr)
 

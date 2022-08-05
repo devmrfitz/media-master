@@ -4,3 +4,4 @@
 
 azure-functions
 Pillow==9.2.0
+trycourier==4.4.0
