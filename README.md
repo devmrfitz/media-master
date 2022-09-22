@@ -1,6 +1,6 @@
 # Media Master
 
-Welcome to Media Master, a tool for managing media files. It is a simple utility that allows performing common tasks on media files in an asynchronous manner, so that you can focus on your work without being interrupted by the heavy lifting.
+Welcome to Media Master, a tool for managing media files built using Courier and Azure Functions. It is a simple utility that allows performing common tasks on media files in an asynchronous manner, so that you can focus on your work without being interrupted by the heavy lifting.
 
 ## Usage
 
