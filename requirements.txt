@@ -3,5 +3,5 @@
 # Manually managing azure-functions-worker may cause unexpected issues
 
 azure-functions
-Pillow==9.2.0
+Pillow==9.3.0
 trycourier==4.4.0
