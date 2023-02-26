@@ -1,10 +1,10 @@
-# Media Maestro
+# Media Master
 
-Welcome to Media Maestro, a tool for managing media files. It is a simple utility that allows performing common tasks on media files in an asynchronous manner, so that you can focus on your work without being interrupted by the heavy lifting.
+Welcome to Media Master, a tool for managing media files. It is a simple utility that allows performing common tasks on media files in an asynchronous manner, so that you can focus on your work without being interrupted by the heavy lifting.
 
 ## Usage
 
-Media Maestro accepts commands in the form of the following metadata fields associated with each blob:
+Media Master accepts commands in the form of the following metadata fields associated with each blob:
 
 - `command`: Stringified list containing the command to be executed as the first element and the arguments to be passed to it.
 - `email`(optional): Email address of the site admin, so that they can be notified in case a user uploads an invalid file.
