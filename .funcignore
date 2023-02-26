@@ -3,3 +3,6 @@
 local.settings.json
 test
 .venv
+media_master/test*
+media_master/__pycache__
+__*
