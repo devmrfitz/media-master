@@ -6,7 +6,7 @@
       "type": "blobTrigger",
       "direction": "in",
       "path": "devmrfitz/data/{name}",
-      "connection": "devmrfitz_STORAGE"
+      "connection": ""
     }
   ]
 }

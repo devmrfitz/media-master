@@ -12,7 +12,6 @@ from media_master.utils import compress_image, compress_video, invert_image, res
 AZURE_CONNECTION_STRING = os.getenv('AzureWebJobsStorage')
 CONTAINER_NAME = "devmrfitz"
 
-CONTAINER_NAME = "devmrfitz"
 print = logging.info
 
 def main(myblob: func.blob.InputStream):
