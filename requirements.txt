@@ -3,4 +3,4 @@
 # Manually managing azure-functions-worker may cause unexpected issues
 
 azure-functions
-Pillow==9.2.0
+Pillow==10.0.1
